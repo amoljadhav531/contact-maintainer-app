@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Something went Wrong</title>
+</head>
+ <style>
+table td{
+vertical-align:top;
+border:solid 1px #888;
+padding:10px;
+}
+
+    </style>
+<body>
+<h1>Something went Wrong!</h1>
+<p>
+    We're sorry, the page you are looking for does not exist or something went wrong!</br>
+    Go back to <a href="/contact-maintainer/">home page</a>.</br></br>
+</p>
+<table>
+    <tr>
+        <td>Error</td>
+        <td th:text="${ex.error}"/>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td th:text="${ex.status}"/>
+    </tr>
+    <tr>
+        <td>Message</td>
+        <td th:text="${ex.message}"/>
+    </tr>
+    <tr>
+        <td>Exception</td>
+        <td th:text="${ex.exception}"/>
+    </tr>
+</table>
+</body>
+</html>
